@@ -17,3 +17,22 @@ class User:
         if isinstance(object, User):
             return self.email == object.email
         return False
+
+    def create_chat(self) -> None:
+        chat = Chat()
+        self.chat_list.append(chat)
+    
+    def update_chat(self) -> None:
+        pass
+    
+    def create_message(self):
+        pass
+    
+    def update_reserved_message(self):
+        pass
+    
+    def delete_reserved_message(self):
+        pass
+    
+    def get_reserved_message_list(self):
+        pass
