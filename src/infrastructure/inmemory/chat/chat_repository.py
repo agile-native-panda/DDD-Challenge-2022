@@ -9,4 +9,4 @@ class InMemoryChatRepository(ChatRepository):
         self.save(chat)
 
     def save(self, chat: Chat) -> None:
-        self.store += chat
+        self.store.append(chat)

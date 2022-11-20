@@ -9,4 +9,4 @@ class InMemoryMessageRepository(MessageRepository):
         self.save(message)
 
     def save(self, message: Message) -> None:
-        self.store += message
+        self.store.append(message)

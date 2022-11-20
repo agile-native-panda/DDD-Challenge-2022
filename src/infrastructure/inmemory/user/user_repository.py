@@ -16,7 +16,7 @@ class InMemoryUserRepository(UserRepository):
             self.save(user)
 
     def save(self, user: User) -> None:
-        self.store += user
+        self.store.append(user)
 
     def get_user_by_email(self, email: Email) -> Optional[User]:
         for user in self.store:
