@@ -14,5 +14,5 @@ class ChatRepository(ABC):
         return
 
     @abstractmethod
-    def save(self, chat:Chat) -> None:
+    def save(self, chat: Chat) -> None:
         return
