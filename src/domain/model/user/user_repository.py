@@ -7,3 +7,7 @@ class UserRepository(ABC):
     @abstractmethod
     def create(self, user: User) -> None:
         return
+
+    @abstractmethod
+    def save(self) -> Nore:
+        return
