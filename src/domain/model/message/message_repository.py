@@ -26,5 +26,5 @@ class MessageRepository(ABC):
         return
 
     @abstractmethod
-    def save(self) -> None:
+    def save(self, messsage: Message) -> None:
         return
