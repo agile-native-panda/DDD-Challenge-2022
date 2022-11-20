@@ -12,3 +12,7 @@ class ChatRepository(ABC):
     @abstractmethod
     def update(self, chat: Chat) -> None:
         return
+
+    @abstractmethod
+    def save(self) -> None:
+        return
