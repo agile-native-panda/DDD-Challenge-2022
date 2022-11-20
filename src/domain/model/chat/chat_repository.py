@@ -4,7 +4,7 @@ from ..chat import Chat
 from ..user import User
 
 
-class MessageRepository(ABC):
+class ChatRepository(ABC):
     @abstractmethod
     def create(self, chat: Chat) -> None:
         return
