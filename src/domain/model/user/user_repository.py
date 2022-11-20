@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
-from . import User
+from . import User, Email
 
 
 class UserRepository(ABC):
@@ -9,5 +9,9 @@ class UserRepository(ABC):
         return
 
     @abstractmethod
-    def save(selfuser: User) -> None:
+    def save(self, user: User) -> None:
+        return
+
+    @abstractmethod
+    def get_user_by_email(self, email: Email) -> bool:
         return
