@@ -20,6 +20,11 @@ class Chat:
         self.message_list = []
         self.user_list = user_list
 
+    def __eq__(self, object: object) -> bool:
+        if isinstance(object, Chat):
+            return self.id == object.id
+        return False
+
     def __is_valid_name(self, name: str):
         len_name = len(name)
         if len_name <= self.NAME_MAX_LEN:

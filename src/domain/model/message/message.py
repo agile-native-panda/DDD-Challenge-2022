@@ -22,3 +22,8 @@ class Message:
         self.planned_datetime = planned_datetime
         self.is_reserved_message = is_reserved_message
         self.is_sent_message = False
+
+    def __eq__(self, object: object) -> bool:
+        if isinstance(object, Message):
+            return self.id == object.id
+        return False
