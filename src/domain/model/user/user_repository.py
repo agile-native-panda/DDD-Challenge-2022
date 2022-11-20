@@ -9,5 +9,5 @@ class UserRepository(ABC):
         return
 
     @abstractmethod
-    def save(self) -> Nore:
+    def save(selfuser: User) -> None:
         return
