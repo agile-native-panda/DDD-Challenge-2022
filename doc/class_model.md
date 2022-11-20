@@ -39,7 +39,7 @@ class Body{
     str tet
     int MIN_LEN = 0
     int MAX_LEN = 1000
-    bool __is_valid_tex(str)
+    bool __is_valid_text(str)
 }
 Chat o-- User
 Chat o-- Message
