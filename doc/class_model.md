@@ -43,7 +43,7 @@ class Body{
 }
 Chat o-- User
 Chat o-- Message
-User --> Message: Create
+User -- Message
 Name -- User
 Email -- User
 Body -- Message
