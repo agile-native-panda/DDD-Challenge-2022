@@ -24,3 +24,7 @@ class MessageRepository(ABC):
     @abstractmethod
     def get_reserved_message_list_in_user(self, user: User) -> list[Message]:
         return
+
+    @abstractmethod
+    def save(self) -> None:
+        return
