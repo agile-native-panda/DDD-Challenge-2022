@@ -2,14 +2,14 @@ import dataclasses
 from email_validator import validate_email, EmailNotValidError
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass(frozen=True, init=False)
 class Email:
     body: str
 
     def __init__(self, body: str) -> None:
         try:
-            validation = validate_email(body, check_deliverability=True)
-            self.body = validation.email
+            validation = validate_email(body, check_deliverability=False)
+            object.__setattr__(self, "body", validation.email)
         except EmailNotValidError as e:
             print(str(e))
 
