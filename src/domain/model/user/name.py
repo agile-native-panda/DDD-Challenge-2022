@@ -13,19 +13,31 @@ class Name:
         try:
             if not self.__is_valid_body(first_name):
                 raise (
-                    ValueError("First Name must be more than {} and less than {}".format(self.NAME_MIN_LEN, self.NAME_MAX_LEN))
+                    ValueError(
+                        "First Name must be more than {} and less than {}".format(
+                            self.MIN_LEN, self.MAX_LEN
+                        )
+                    )
                 )
             if not self.__is_valid_body(last_name):
                 raise (
-                    ValueError("Last Name must be more than {} and less than {}".format(self.NAME_MIN_LEN, self.NAME_MAX_LEN))
+                    ValueError(
+                        "Last Name must be more than {} and less than {}".format(
+                            self.MIN_LEN, self.MAX_LEN
+                        )
+                    )
                 )
             if not self.__is_valid_body(nickname):
                 raise (
-                    ValueError("Nickname must be more than {} and less than {}".format(self.NAME_MIN_LEN, self.NAME_MAX_LEN))
+                    ValueError(
+                        "Nickname must be more than {} and less than {}".format(
+                            self.MIN_LEN, self.MAX_LEN
+                        )
+                    )
                 )
-            self.first_name = first_name
-            self.last_name = last_name
-            self.nickname = nickname
+            object.__setattr__(self, "first_name", first_name)
+            object.__setattr__(self, "last_name", last_name)
+            object.__setattr__(self, "nickname", nickname)
         except ValueError as e:
             print(str(e))
 
@@ -34,4 +46,5 @@ class Name:
 
         if self.MIN_LEN < len_body < self.MAX_LEN:
             return True
+
         return False
